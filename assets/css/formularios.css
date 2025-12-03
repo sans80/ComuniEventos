@@ -1,0 +1,164 @@
+.registro-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 22px 22px 26px 26px; 
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(2,6,23,0.06);
+    position: relative;
+    overflow: hidden;
+    border-left: 6px solid var(--accent); 
+}
+
+.registro-container > h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.registro-container .separator {
+    height: 1px;
+    background: #eef2f8;
+    margin: 12px 0 18px 0;
+    border-radius: 2px;
+}
+
+.registro-container .form-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 14px;
+}
+
+.registro-container .field label {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    margin-bottom:6px;
+    color: #0f172a;
+    font-weight:600;
+}
+
+.registro-container .label-icon {
+    width:20px;
+    height:20px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 20px;
+}
+
+.registro-container .field input,
+.registro-container .field textarea,
+.registro-container .field select {
+    padding: 11px;
+    border-radius: 10px;
+    border: 1px solid #e6edf7;
+    font-size: 15px;
+    background: #fff;
+    color: #0f172a;
+    transition: box-shadow .18s ease, border-color .18s ease, transform .06s ease;
+}
+
+.registro-container .field input:focus,
+.registro-container .field textarea:focus,
+.registro-container .field select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 6px 20px rgba(37,99,235,0.08);
+    transform: translateY(-1px);
+}
+
+.registro-container .field input::placeholder,
+.registro-container .field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.registro-container .avatar-preview {
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 13px;
+    border: 1px solid #e2e8f0;
+    margin-top: 6px;
+}
+
+.registro-container .acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.registro-container .btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    box-shadow: 0 6px 18px rgba(37,99,235,0.06);
+    transition: transform .08s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.registro-container .btn:hover { transform: translateY(-2px); }
+.registro-container .btn:active { transform: translateY(0); }
+
+.registro-container .btn.primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.registro-container .btn.ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid rgba(37,99,235,0.12);
+}
+
+.registro-container .hint {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+    .registro-container {
+        padding: 18px;
+    }
+
+    .registro-container .avatar-preview {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.registro-container .field input,
+.registro-container .field textarea {
+    border: 2px solid #000000;
+    background: #ffffff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.registro-container .field input:hover,
+.registro-container .field textarea:hover {
+    border-color: #aab0c0;
+}
+
+.registro-container .field input:focus,
+.registro-container .field textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.20);
+    outline: none;
+}
+
+.registro-container .field input::placeholder,
+.registro-container .field textarea::placeholder {
+    color: #97a1b6;
+}

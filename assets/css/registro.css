@@ -1,0 +1,79 @@
+:root {
+    --bg: #fafbff;
+    --card: #ffffff;
+    --accent: #2563eb;
+    --muted: #6b7280;
+    --pill: #eef2ff;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #0f172a;
+    font-family: inherit;
+    line-height: 1.4;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+header { background: linear-gradient(90deg, #1e40af, #2563eb); color: #fff; padding: 28px 0; }
+header .inner { display:flex; align-items:center; justify-content:space-between; gap:12px }
+h1 { margin:0; font-size:20px }
+p.lead { margin:6px 0 0; color: rgba(255,255,255,0.9) }
+nav a { color: rgba(255,255,255,0.95); text-decoration:none; margin-left:14px; font-weight:600 }
+
+.registro-container {
+  background: var(--card);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  max-width: 860px;
+  margin: 28px auto;
+}
+.registro-container h2 { margin-top:0; margin-bottom:6px }
+.registro-container p.sub { color:var(--muted); margin-top:0; margin-bottom:16px }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 18px;
+}
+.field { display:flex; flex-direction:column; }
+.field label { font-size:13px; margin-bottom:6px; color:#111827 }
+.field input,
+.field select,
+.field textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6edf6;
+  background: #fff;
+  font-size: 14px;
+}
+.field textarea { min-height:90px; resize:vertical }
+
+.acciones { margin-top:18px; display:flex; gap:12px; align-items:center }
+.btn {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg,#1e40af,var(--accent));
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.12);
+}
+.btn.secondary {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid #e6edf6;
+  box-shadow: none;
+}
+
+@media (max-width: 860px) {
+  .form-grid { grid-template-columns: 1fr; }
+  header .inner { flex-wrap:wrap; gap:8px }
+}
+
+@media (max-width: 420px) {
+  .container { padding: 16px }
+  .registro-container { padding: 16px }
+}

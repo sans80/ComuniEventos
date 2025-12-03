@@ -1,0 +1,150 @@
+:root {
+    --bg: #fafbff;
+    --card: #ffffff;
+    --accent: #2563eb;
+    --muted: #6b7280;
+    --pill: #eef2ff;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #0f172a;
+    font-family: inherit;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+header {
+    background: linear-gradient(90deg, #1e40af, #2563eb);
+    color: #fff;
+    padding: 28px 0;
+}
+
+header .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+p.lead {
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    margin-left: 14px;
+    font-weight: 600;
+}
+
+/* ------- FORMULARIO LOGIN ------- */
+
+.login-wrapper {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  padding: 28px;
+  background: var(--card);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+.form-title {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.form-sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.form-group { margin-bottom: 14px; }
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e6edf6;
+  background: #fff;
+  font-size: 14px;
+}
+
+.input-row {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.remember {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color: var(--muted);
+  font-size:14px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #1e40af, var(--accent));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.18);
+}
+
+.small-link {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight:600;
+}
+
+footer {
+    margin: 36px 0;
+    color: var(--muted);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media (max-width:900px) {
+    nav { display: none; }
+}
+

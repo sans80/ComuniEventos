@@ -1,0 +1,235 @@
+:root {
+    --bg: #fafbff;
+    --card: #ffffff;
+    --accent: #2563eb;
+    --muted: #6b7280;
+    --pill: #eef2ff;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #0f172a;
+    font-family: inherit;
+    line-height: 1.4
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px
+}
+
+header {
+    background: linear-gradient(90deg, #1e40af, #2563eb);
+    color: #fff;
+    padding: 28px 0
+}
+
+header .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px
+}
+
+p.lead {
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    margin-left: 14px;
+    font-weight: 600
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 20px;
+    align-items: center;
+    margin-top: 22px
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06)
+}
+
+.features {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap
+}
+
+.feature {
+    flex: 1;
+    min-width: 160px;
+    background: var(--pill);
+    padding: 12px;
+    border-radius: 10px
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 14px
+}
+
+.photo {
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px
+}
+
+.photo svg {
+    width: 100%;
+    height: auto;
+    max-height: 160px
+}
+
+footer {
+    margin: 36px 0;
+    color: var(--muted);
+    text-align: center;
+    padding-bottom: 20px
+}
+
+@media (max-width:900px) {
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    nav {
+        display: none
+    }
+}
+
+@media (max-width:560px) {
+    .gallery {
+        grid-template-columns: 1fr
+    }
+}
+
+/* ------------------------------
+   BOTÓN DESPLEGABLE
+------------------------------ */
+.sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.sidebar-toggle:hover {
+    background: #444;
+}
+
+/* ------------------------------
+   SIDEBAR DESPLEGABLE
+------------------------------ */
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #171717;
+    color: white;
+    padding: 20px 0;
+    transform: translateX(-270px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.admin-sidebar.open {
+    transform: translateX(0);
+}
+
+.admin-sidebar h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-sidebar nav ul li {
+    border-bottom: 1px solid #222;
+}
+
+.admin-sidebar nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background .3s;
+}
+
+.admin-sidebar nav ul li a i {
+    margin-right: 10px;
+}
+
+/* Hover */
+.admin-sidebar nav ul li a:hover {
+    background: #2b2b2b;
+}
+
+/* Activo */
+.admin-sidebar nav ul li a.active {
+    background: #444;
+    color: white;
+}
+/* Forzar enlaces en vertical */
+.admin-sidebar nav ul {
+    display: flex;
+    flex-direction: column !important;
+}
+
+.admin-sidebar nav ul li {
+    width: 100%;
+}
+
+.admin-sidebar nav ul li a {
+    display: block;
+    width: 100%;
+}
+
